@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: nginx:alpine
+    build:
+      context: .
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
